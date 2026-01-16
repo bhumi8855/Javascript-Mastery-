@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 - Modern JS Features</title>
+</head>
+<body>
+    <script>
+        1.//let and const
+          let age=20;
+          age=21; //allowed
+
+          const pi=3.14; //cannot change
+
+        2.//Arrow functions-short & clean
+        let add=(a,b)=>a+b
+         //normal function
+         function add1(a,b){
+            return a+b;
+         }
+
+        3.//Template Literals -string formatting using ${} placeholder
+
+        let name="Bhumika";
+        let branch="CSE";
+
+        console.log(`My name is ${name} and I study ${branch}`);
+
+        4.//Destructuring-extract values easily of arrays
+
+        let colors=["Red","Blue","Green"];
+
+        let[a,b]=colors;
+        console.log(a);
+        console.log(b);
+
+        5.//Destructuring Objects
+        let student={
+            name1:"Bhumika",
+            year:"2",
+        };
+        let {name1,year}=student;
+        console.log(name1,year);
+
+        6.//Spread Operator(...)-for copying array
+        let nums=[1,2,3];
+        let newNums=[...nums,4,5];
+
+        console.log(newNums);
+
+        //object copy
+
+        let user={name:"Riya"};
+        let newUser={...user,age:"22"};
+
+        7.//Rest Operator(...)-to collect multiple values as parameters and give result 
+        function sum(...numbers){
+             let total=0;
+             for(let n of numbers){
+                total+=n;
+             }
+             return total;
+        }
+            console.log(sum(10,20,30));
+
+    </script>
+</body>
+</html>
