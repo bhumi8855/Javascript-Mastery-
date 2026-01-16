@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in JS</title>
+</head>
+<body>
+    <script>
+    //Multiplication table using for loop
+    1.
+    let number=5;
+    for(let i=1;i<=10;i++){
+        console.log(`${number}×${i}=${number*i}`);
+    }
+    
+    2.//Countdown timer using while loop
+    let count=5;
+    while(count>0){
+        console.log("Countdown:",count);
+    count--;
+    console.log("Time up!");
+    }
+
+    3.//login attempt Simulation using do-while loop
+    let attempts=1;
+    do{
+        console.log("Login attempts:",attempts);
+        attempts++;
+    }while(attempts<=3)
+
+    4.//for..of loop
+    let fruits=["Apple","Banana","Mango"];
+ 
+    for(let fruit of fruits){
+        console.log(fruit);
+    }
+
+    5.//for..in loop
+    let student={
+        name:"Bhumika",
+        branch:"CSE",
+        year:"3rd"
+    };
+      
+    for(let key in student){
+        console.log(key+":",student[key]);
+    }
+
+    6.//nested loop
+    let numbers=[4,6,2,4,9,6];
+    
+    for(let i=0;i<numbers.length;i++){
+        for(let j=i+1;j<numbers.length;j++){
+            if(numbers[i]===numbers[j]){
+                console.log("First repeating  number:",numbers[i]);
+                i=numbers.length;
+                break;
+            }
+        }
+    }
+    </script>
+</body>
+</html>
