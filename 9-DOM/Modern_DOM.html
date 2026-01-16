@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern DOM Concepts</title>
+</head>
+<body>
+    <p class="msg">Hello</p>
+    <p class="msg">Hii</p>
+    <button id="btn">Click Me</button>
+    <script>
+        1.//querySelector()-selects only first match
+        let text=document.querySelector(".msg");
+        console.log(text.innerText);
+
+        2.//querySelectorAll()-selects all matching elements
+        let items=document.querySelectorAll(".msg");
+        console.log(items.innerText);
+
+        items.forEach(item=>{
+            item.style.color="blue";
+        });
+
+        3.//addEventListener()
+        let btn=document.querySelector("#btn");
+        
+        btn.addEventListener("click",function(){
+            alert("Button clicked!");
+        })
+    </script>
+</body>
+</html>

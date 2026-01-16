@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <p id="msg">Hello</p>
+    <p class="item">Item 1</p>
+    <p class="item">Item 2</p>
+    
+    <script>
+        //1.Selecting Element by ID
+
+        let text=document.getElementById("msg");
+        console.log(text.innerText);
+
+        //2.Changing Text Content
+        text.innerText="Welcome to Javascript";
+
+        3.//Changing style
+        text.style.color="blue";
+        text.style.fontSize="20px";
+
+        //4.Selecting multiple elements using class
+
+        let items=document.getElementsByClassName("item");
+
+        for(let i=0;i<items.length;i++){
+            items[i].style.color="green";
+        }
+
+        //5.Creating new Element
+        let newPara=document.createElement("p");
+        newPara.innerText="This is dynamically added";
+        document.body.appendChild(newPara);
+
+        //6.Removing Element after two sec
+        setTimeout(()=>{
+        newPara.remove();
+        },2000);
+    </script>
+</body>
+</html>
