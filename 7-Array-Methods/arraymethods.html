@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        1.//forEach()-Access Each Element
+
+        let numbers=[1,2,3,4,];
+        numbers.forEach(num=>{
+            console.log(num);
+        })
+
+        2.//map()-Transform Array/Modify Array
+
+        let prices=[100,200,300];
+        let updatedPrices=prices.map(price=>price+50);
+        console.log(updatedPrices);
+        
+        3.//filter()-Select Elements
+
+        let ages=[10,20,30,18,35];
+        let adults=ages.filter(age=>age>=18);
+        console.log(adults);
+
+        4.//reduce()-Combine to single value
+        let marks=[70,80,90];
+        let total=marks.reduce((sum,marks)=>sum+marks,0);
+        console.log("Total Marks:",total);
+
+        5.//find()-Find First Match
+        let students=["Amit","Bhumika","Neha"];
+        let result=students.find(name=>name==="Bhumika");
+        console.log(result);
+        
+        6.//Sort()-Arrange Elements
+        let scores=[45,12,78,34];
+        scores.sort((a,b)=>a-b);
+        console.log(scores);
+    </script>
+</body>
+</html>
