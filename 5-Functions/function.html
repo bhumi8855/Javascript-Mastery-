@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JS</title>
+</head>
+<body>
+    <script> 
+        1.//function Declaration
+        function greet(){
+            console.log("Hello,Welcome to Javascript!");
+        }
+        greet();
+
+        2.//function with parameters
+        function greetuser(name){
+            console.log("Hello"+name);
+        }
+        greetuser("Bhumika");
+
+        3.//Function with Return value
+        function add(a,b){
+            return a+b;
+        }
+        let result=add(10,5);
+        console.log("Sum:"+result);
+
+        4.//Function Expression stored inside variable
+        let multiply=function(a,b){
+            return a*b;
+        }
+        console.log(multiply(4,5));
+
+        5.//Arrow Function
+        let square=(num)=>{
+            return num*num;
+        }
+        console.log(square(5));
+    </script>
+</body>
+</html>
