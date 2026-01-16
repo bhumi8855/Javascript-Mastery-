@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in JS</title>
+</head>
+<body>
+    <script>
+        1.//Creating an array
+        let numbers=[10,20,30,40];
+        console.log(numbers);
+
+        2.//Accessing array elements
+        let fruits=["Apple","Banana","Mango"];
+        console.log(fruits[0]);
+        console.log(fruits[2]);
+
+        3.//Updating array elements
+        let colors=["Red","Blue","Green"];
+        colors[1]="Yellow";
+        console.log(colors);
+    
+        4.//Array length
+        let cities=["Pune","Mumbai","Delhi"];
+        console.log("Total Cities:",cities.length);
+
+        5.//Adding elements(push)
+        let tasks=["Study","Practice"];
+        tasks.push("Revision");
+        console.log(tasks);
+
+        6.//Removing elements(pop)
+        let tasks1=["Study","Practice","Revision"];
+        tasks1.pop();
+        console.log(tasks1);
+
+        7.//Looping through array
+        let  subjects=["Maths","Physics","CS"];
+
+        for(let i=0;i<subjects.length;i++){
+            console.log(subjects[i]);
+        }
+
+        8.//Check Elements Exists
+        let languages=["C","C++","Javascript"];
+        
+        if(languages.includes("Javascript")){
+            console.log("Javascript is available");
+        }
+    </script>
+</body>
+</html>
