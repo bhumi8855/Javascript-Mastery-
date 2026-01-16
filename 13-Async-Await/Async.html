@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async-Await in JS</title>
+</head>
+<body>
+    <script>
+        1.//setTimeout()
+
+        console.log("Start");
+        setTimeout(()=>{
+           console.log("Middle");
+        },2000);
+
+        console.log("End");
+
+        2.//Callback-First async technique,function passed to another function
+        
+        function  getData(callback){
+            setTimeout(()=>{
+                callback("Data received");
+            },2000);
+        }
+
+        getData(function(message){
+            console.log(message);
+        });
+
+        3.//Promises
+
+        let promise=new Promise((resolve,reject)=>{
+            let success=true;
+
+            if (success){
+                resolve("Task Successful");
+            }else{
+                reject("Task failed");
+            }
+        });
+
+        //.then if promise resolves and to give or print result of resolve
+        //.catch for reject state to print reject state or error
+        promise
+              .then(result=>{
+                console.log(result);
+              })
+              .catch(error=>{
+                console.log(error)
+              });
+
+        4.//Async-await
+
+        function fetchData(){
+            return new Promise(resolve=>{
+                setTimeout(()=>{
+                    resolve("Data loaded");
+                },2000);
+            });
+        }
+
+
+        async function showData(){
+            console.log("Loading...");
+
+            let result=await fetchData();
+
+            console.log(result);
+        } 
+
+        showData();
+    </script>
+</body>
+</html>
