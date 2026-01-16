@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Events</title>
+</head>
+<body>
+    <button onclick="showMsg()">Click Me</button><br/>
+    <p ondblclick="doubleClick()">Double click this text</p><br/>
+    <p onmouseover="changeColor(this)">Hover over me</p><br/>
+    <p  onmouseout="resetColor(this)">Move mouse out</p><br/>
+    <input type="text" onkeydown="keyDown()"><br/>
+    <input type="text" onkeyUp="keyUp()"><br/>
+    <input type="text" oninput="showText(this)">
+    <p id="output"></p>
+    <select onchange="showOption(this)">
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>Javascript</option>
+    </select><br/>
+    <input type="text" onfocus="focusMsg(this)"><br/>
+     <input type="text" onblur="blurMsg(this)"><br/>
+     <form onsubmit="submitForm()">
+     <input type="text" required>
+     <button> type="submit">Submit</button>
+     </form>
+     <script src="Events.js"></script>
+</body>
+</html>
