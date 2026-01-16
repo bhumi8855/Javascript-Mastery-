@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON in JS</title>
+</head>
+<body>
+    <script>
+        1.// Convert object to JSON i.e., into string 
+        let product={
+            name:"Laptop",
+            price:"50000"
+        };
+
+        console.log(JSON.stringify(product));
+
+        2.//Convert JSON to Object
+        let data={
+            "city":"Pune",
+            "state":"MH"
+        };
+
+        let obj=JSON.parse(data);
+        console.log(obj.city);
+        
+    </script>
+</body>
+</html>
