@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage in JS</title>
+</head>
+<body>
+    <script>
+        1.//setItem()-Stores data in key-value pair
+        localStorage.setItem("name","Bhumika");
+    
+        2.//getItem()-get or read data
+        let username=localStorage.getItem("name");
+        console.log(username);
+
+        3.//removeItem()-Remove data
+        localStorage.removeItem("name");
+
+        4.//claer All data
+        localStorage.clear();
+
+        5.//store Object using JSON
+         let user={
+            name:"Bhumika",
+            branch:"CSE"
+         };
+
+         localStorage.setItem("userData",JSON.stringify(user));
+
+         6.//Read Object from localStorage
+         
+         let data=JSON.parse(localStorage.getItem("userData"));
+         console.log(data.name);
+         console.log(data.branch);
+    </script>
+</body>
+</html>
