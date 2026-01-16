@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        1.//Creating Object using {}
+        let student={
+            name:"Bhumika",
+            branch:"CSE",
+            year:3
+        };
+        console.log(student);
+
+        2.// Accessing Object Properties using .&[]notation
+         console.log(student.name);
+         console.log(student["branch"]);
+
+         3.//Updating Object Properties
+         student.year=4;
+         console.log(student);
+
+         4.//Adding new Property
+         student.college="SGI Institute";
+         console.log(student);
+
+         5.//Deleting a Property
+         delete student.branch;
+         console.log(student);
+
+         6.//Looping through Object(for..in)
+         for(let key in student){
+            console.log(key+":"+student[key]);
+         }
+         7.//Nested Object
+         let employee={
+            name:"Rahul",
+            id:101,
+            address:{
+                city:"Kolhapur",
+                state:"MH"
+            }
+         };
+         console.log(employee.address.city);
+
+    </script>
+</body>
+</html>
